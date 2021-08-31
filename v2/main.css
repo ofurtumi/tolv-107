@@ -1,0 +1,77 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
+body {
+  background-image: url(pages/cs.jpg);
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Code Pro', monospace;
+}
+
+/* css fyrir navbar */
+nav {
+  background: black;
+  color: white;
+}
+
+ul {
+  margin: 0;
+  padding: 10px;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.navbar li {
+  display: inline-block;
+  margin: 5px 10px;
+}
+
+.navbar a {
+  color: white;
+}
+
+main {
+  background: white;
+  padding: 25px;
+}
+
+main#index {
+  height: 415px;
+  width: 485px;
+  position: absolute;
+  top: 150px;
+  left: 33%;
+}
+
+#vid {
+  position: absolute;
+  top: 375px;
+  left: 250px;
+}
+
+@media (min-width: 1px) and (max-width: 1400px) {
+  main#index {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
+    height: fit-content;
+    top: auto;
+    left: auto;
+  }
+  #vid {
+    margin: 0 auto;
+    margin-top: 20px;
+    position: relative;
+    display: block;
+    top: auto;
+    left: auto;
+  }
+}
