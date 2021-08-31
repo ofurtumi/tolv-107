@@ -6,9 +6,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="main.css">
+    <style>
+        .vid-img-holder {
+            margin: 25px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        #vid {
+            display: inline-block;
+            border: none;
+            width: 560px; 
+            height: 315px;
+        }
+
+        #code-img-small {
+            display: inline-block;
+            height: 315px;
+        }
+    </style>
     <title>Forsíða</title>
 </head>
+
 <body>
+    <a class="skip" href="#main">
+        Fara beint í main
+    </a>
     <nav>
         <!-- Það þarf að laga issue með navbarið hætti þegar skjárinn verðu 610px stór -->
         <ul class="navbar">
@@ -18,15 +42,23 @@
             <li><a href="pages/faq.html">Algengar spurningar</a></li>
         </ul>
     </nav>
-    <main id="index">
+    <main id="main">
         <h1>Tölvunarfræði</h1>
         <h3>BS gráða - 180 ECTS einingar</h3>
-        <br>
 
-        <p>Tölvunarfræðingar taka virkan þátt í þróun, hönnun, prófun, breytingu og forritun hugbúnaðar og starfa með fólki úr mörgum fagstéttum.</p>
-        <p>Uppbygging og rekstur nútímaþjóðfélags byggist í veigamiklum atriðum á hugbúnaði og námið miðar að því að nemendur verði færir um að þróa og reka traustan og skilvirkan hugbúnað.</p>
+        <p>Tölvunarfræðingar taka virkan þátt í þróun, hönnun, prófun, breytingu og forritun hugbúnaðar og starfa með
+            fólki úr mörgum fagstéttum.</p>
+        <p>Uppbygging og rekstur nútímaþjóðfélags byggist í veigamiklum atriðum á hugbúnaði og námið miðar að því að
+            nemendur verði færir um að þróa og reka traustan og skilvirkan hugbúnað.</p>
         <a href="pages/apply.html">Sækja um</a>
-        <iframe id="vid" width="560" height="315" src="https://www.youtube.com/embed/v2Em6HmlBRU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <div class="vid-img-holder">
+            <iframe id="vid" src="https://www.youtube.com/embed/v2Em6HmlBRU"
+                title="Stutt kynningarmyndband frá háskólanum"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+            <img src="pages/cs.jpg" alt="Mynd af tölvuskjá sem er að birta forritunarkóða" id="code-img-small">
+        </div>
     </main>
 </body>
+
 </html>

@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 body {
-  background-image: url(pages/cs.jpg);
-  background-size: cover;
   margin: 0;
   padding: 0;
   font-family: 'Source Code Pro', monospace;
@@ -11,9 +9,10 @@ body {
 nav {
   background: black;
   color: white;
+  width: 100%;
 }
 
-ul {
+.navbar {
   margin: 0;
   padding: 10px;
   color: white;
@@ -39,39 +38,25 @@ ul {
 main {
   background: white;
   padding: 25px;
+  padding-top: 10px;
 }
 
-main#index {
-  height: 415px;
-  width: 485px;
+.skip {
+  background: white;
+  color: black;
+  height: 30px;
+  padding: 8px;
   position: absolute;
-  top: 150px;
-  left: 33%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: -webkit-transform 0.3s;
+  transition: -webkit-transform 0.3s;
+  transition: transform 0.3s;
+  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
-#vid {
-  position: absolute;
-  top: 375px;
-  left: 250px;
+.skip:focus {
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
 }
-
-@media (min-width: 1px) and (max-width: 1400px) {
-  main#index {
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
-    height: fit-content;
-    top: auto;
-    left: auto;
-  }
-  #vid {
-    margin: 0 auto;
-    margin-top: 20px;
-    position: relative;
-    display: block;
-    top: auto;
-    left: auto;
-  }
-}
+/*# sourceMappingURL=main.css.map */
