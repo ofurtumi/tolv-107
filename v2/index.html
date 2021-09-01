@@ -10,6 +10,7 @@
         .vid-img-holder {
             margin: 25px;
             display: flex;
+            flex-direction: row;
             justify-content: space-around;
             align-items: center;
         }
@@ -24,6 +25,19 @@
         #code-img-small {
             display: inline-block;
             height: 315px;
+        }
+
+        @media only screen and (max-width: 900px) {
+            
+            .vid-img-holder {
+                flex-direction: column;
+            }
+
+            #vid, #code-img-small {
+                width: 90vw;
+                margin: 20px 0;
+                display: block;
+            }
         }
     </style>
     <title>Forsíða</title>

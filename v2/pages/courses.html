@@ -10,7 +10,7 @@
         
         .cont {
             display: block;
-            width: 600px;
+            width: 70vw;
             margin: 0 auto;
         }
 
@@ -29,7 +29,22 @@
             text-align: center;
         }
         
-        
+        @media only screen and (max-width: 575px) {
+            
+            .inner-cont {
+                display: flex;
+                flex-direction: column;
+                border: 1px black solid;
+            }
+
+            p {
+                border: none;
+            }
+
+            #head {
+                display: none;
+            }
+        }
     </style>
     <title>Áfangar</title>
 </head>
@@ -55,10 +70,10 @@
             <li><a href="faq.html">Algengar spurningar</a></li>
         </ul>
     </nav>
+    <main id="main">
     <h1>Kjörsvið: Almenn tölvunarfræði</h1>
     <h2>(Námskeið ársins 2021-2022)</h2>
-    
-    <main id="main">
+
         <div class="cont" id="fyrsta">
             <br>
             <h3>Fyrsta ár</h3>
