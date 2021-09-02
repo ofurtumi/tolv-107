@@ -36,10 +36,11 @@ h2 {
     transition: .2s;
 }
 
-.single-link:hover {
+.single-link:hover, .single-link:focus-within {
     background: gray;
     color: white;
 }
+
 
 .link-spanner{
     position:absolute; 
@@ -49,3 +50,4 @@ h2 {
     left: 0;
     z-index: 1;
 }
+
