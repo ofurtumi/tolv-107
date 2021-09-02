@@ -23,6 +23,24 @@
         select {
             margin-bottom: 20px;
         }
+
+        button {
+            background: white;
+            font-size: 1.5em;
+            font-weight: bold;
+            border: 1px black solid;
+            width: 5em;
+            height: 2em;
+            margin: 2px;
+            cursor: pointer;
+            transition: .15s;
+        }
+
+        button:focus, button:hover {
+            background: black;
+            color: white;
+        }
+
     </style>
     <title>Sækja um</title>
 </head>
@@ -36,7 +54,7 @@
         </ul>
     </nav>
     <main>
-        <form action="">
+        <form>
             <fieldset>
                 <legend>Persónuupplýsingar</legend>
                 <input type="text" id="name" required>
@@ -150,6 +168,7 @@
                 <br>
                 <input type="file" id="annad">
             </fieldset>
+            <button>Senda</button>
         </form>
     </main>
 </body>
