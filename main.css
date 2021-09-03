@@ -1,4 +1,7 @@
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
+
 body {
+    font-family: 'Source Code Pro', monospace;
     background-image: radial-gradient(white, lightgray);
 }
 
@@ -11,11 +14,35 @@ h2 {
     margin: .2em;
 }
 
+.skip {
+    background: white;
+    color: black;
+    height: 20px;
+    padding: 8px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    -webkit-transform: translateX(-110%);
+            transform: translateX(-110%);
+    -webkit-transition: -webkit-transform 0.3s;
+    transition: -webkit-transform 0.3s;
+    transition: transform 0.3s;
+    transition: transform 0.3s, -webkit-transform 0.3s;
+  }
+  
+  .skip:focus {
+    -webkit-transform: translateY(0%);
+            transform: translateY(0%);
+  }
+
 .container {
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 6fr 1fr;
     padding: 25px;
 }
 
-.inner-container {
+.link-container {
     max-width: 1000px;
     margin: 0 auto;
     display: grid;
@@ -31,7 +58,6 @@ h2 {
     padding: 10px;
     border: 3px black solid;
     color: black;
-    font-family: Arial, Helvetica, sans-serif;
     position: relative;
     transition: .2s;
 }
@@ -50,3 +76,23 @@ h2 {
     z-index: 1;
 }
 
+.contact-container {
+    margin: 10px;
+}
+
+.contact-container li {
+    margin: 2px 0;
+}
+
+.contact-container a {
+    text-decoration: underline;
+    color: black;
+    border-radius: 5px;
+    padding: 2px;
+
+}
+
+.contact-container a:hover, a:focus {
+    background: black;
+    color: white;
+}
