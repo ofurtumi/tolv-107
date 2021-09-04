@@ -28,22 +28,23 @@
             display: table;
         }
 
-        th {
+        th, caption {
             text-align: start;
         }
 
-        h3 {
+        caption {
             font-size: 1.2em;
+            /* padding: 5px; */
             font-weight: bolder;
+            border: none;
             margin: 5px;
         }
 
-        .fyrirsogn {
-            border: none;
+        h3 {
+            font-weight: bolder;
         }
 
-        h1,
-        h2 {
+        h1,h2 {
             text-align: center;
         }
 
@@ -94,11 +95,8 @@
         <h2>(Námskeið ársins 2021-2022)</h2>
 
         <table class="cont" id="fyrsta">
-            <tr>
-                <th class="fyrirsogn">
-                    <h3>Fyrsta ár</h3>
-                </th>
-            </tr>
+            <caption class="fyrirsogn">Fyrsta ár</caption>
+
             <tr class="inner-cont head">
                 <th>Númer</th>
                 <th>Heiti</th>
@@ -146,11 +144,7 @@
             </tr>
         </table>
         <table class="cont" id="annad">
-            <tr>
-                <th class="fyrirsogn">
-                    <h3>Annað ár</h3>
-                </th>
-            </tr>
+            <caption class="fyrirsogn">Annað ár</caption>
             <tr class="inner-cont head">
                 <th>Númer</th>
                 <th>Heiti</th>
@@ -193,11 +187,7 @@
             </tr>
         </table>
         <table class="cont" id="tridja">
-            <tr>
-                <th class="fyrirsogn">
-                    <h3>Þriðja ár</h3>
-                </th>
-            </tr>
+            <caption class="fyrirsogn">Þriðja ár</caption>
             <tr class="inner-cont head">
                 <th>Númer</th>
                 <th>Heiti</th>
@@ -221,11 +211,7 @@
         </table>
 
         <table class="cont" id="ohad">
-            <tr>
-                <th class="fyrirsogn">
-                    <h3>Óháð námsári</h3>
-                </th>
-            </tr>
+            <caption class="fyrirsogn">Óháð námsári</caption>
             <tr class="inner-cont head">
                 <th>Númer</th>
                 <th>Heiti</th>
