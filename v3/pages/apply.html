@@ -10,7 +10,7 @@
         form {
             /* display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-            margin: 10px;
+            margin: 10px auto;
         }
 
         legend {
@@ -19,21 +19,12 @@
         }
 
         fieldset {
+            float: left;
+            margin: 2em 1.5em;
             margin-bottom: 1em;
             width: 200px;
         }
-        .fyrsti {
-            float: inline-end;
-        }
-        .annar {
-        }
-        .tridji {
-        }
-
-        .fjordi {
-        }
-
-
+  
         input, label {
             margin: .5em;
         }
@@ -42,32 +33,14 @@
             margin-bottom: 1em;
         }
 
-        button {
-            grid-row: 2;
-            background: white;
-            font-size: 1.5em;
-            font-weight: bold;
-            border: 1px black solid;
-            width: 5em;
-            height: 2em;
-            margin: 2px;
-            cursor: pointer;
-            transition: .15s;
-        }
-
-        button:focus, button:hover {
-            background: black;
-            color: white;
-        }
-
         #schools {
             width: 150px;
         }
 
         .takki {
-            position: absolute;
-            bottom: 10em;
-            left: 15em;
+            width: 90vw;
+            margin: 0 auto;
+            display: block;
         }
     </style>
     <title>Sækja um</title>

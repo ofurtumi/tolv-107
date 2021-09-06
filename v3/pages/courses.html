@@ -6,34 +6,24 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../main.css">
-    <style>
-        .cont {
+    <style> 
+        .toflur {
             margin: 0 auto;
-        }
-
-        .inner-cont {
-            display: grid;
-            grid-template-columns: 1fr 2fr 1fr;
         }
 
         td,th {
             margin: 0;
-            padding: 5px;
+            padding: .25em;
             border: 1px black solid;
         }
-
+        
         table {
-            width: 90%;
-            display: table;
-        }
-
-        .toflur {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-        }
-
-        th, caption {
-            text-align: start;
+            border-spacing: 0;
+            min-width: 40vw;
+            max-width: 40vw;
+            display: inline-table;
+            vertical-align: top;
+            margin: 1em 2em;
         }
 
         caption {
@@ -41,7 +31,8 @@
             /* padding: 5px; */
             font-weight: bolder;
             border: none;
-            margin: 5px;
+            margin: .25em;
+            text-align: start;
         }
 
         h3 {

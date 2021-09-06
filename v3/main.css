@@ -16,14 +16,14 @@ nav {
 }
 
 .navbar {
-    display: flex;
-    justify-content: center;
+    text-align: center;
     list-style: none;
     padding-inline-start: 0;
 }
 
 .navbar li {
     margin: 0px .75em;
+    display: inline;
 }
 
 .navbar a {
