@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="is">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../main.css">
+    <style>
+        .cont {
+            margin: 0 auto;
+        }
+
+        .inner-cont {
+            display: grid;
+            grid-template-columns: 1fr 2fr 1fr;
+        }
+
+        td,th {
+            margin: 0;
+            padding: 5px;
+            border: 1px black solid;
+        }
+
+        table {
+            width: 90%;
+            display: table;
+        }
+
+        .toflur {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+        }
+
+        th, caption {
+            text-align: start;
+        }
+
+        caption {
+            font-size: 1.2em;
+            /* padding: 5px; */
+            font-weight: bolder;
+            border: none;
+            margin: 5px;
+        }
+
+        h3 {
+            font-weight: bolder;
+        }
+
+        h1,h2 {
+            text-align: center;
+        }
+
+        
+    </style>
+    <title>Áfangar</title>
+</head>
+
+<body>
+    <a class="skip" href="#fyrsta">
+        Fara beint í fyrsta ár
+    </a>
+    <a class="skip" href="#annad">
+        Fara beint í annað ár
+    </a>
+    <a class="skip" href="#tridja">
+        Fara beint í þriðja ár
+    </a>
+    <a class="skip" href="#ohad">
+        Fara beint í áfanga óháða ári
+    </a>
+    <nav>
+        <!-- Það þarf að laga issue með navbarið hætti þegar skjárinn verðu 610px stór -->
+        <ul class="navbar">
+            <li><a href="../">Forsíða</a></li>
+            <li><a href="apply.html">Sækja um</a></li>
+            <li><a href="#">Áfangar</a></li>
+            <li><a href="faq.html">Algengar spurningar</a></li>
+        </ul>
+    </nav>
+    <main id="main">
+        <h1>Kjörsvið: Almenn tölvunarfræði</h1>
+        <h2>(Námskeið ársins 2021-2022)</h2>
+
+        <div class="toflur">
+
+            <table class="cont" id="fyrsta">
+                <caption class="fyrirsogn">Fyrsta ár</caption>
+    
+                <tr class="inner-cont head">
+                    <th>Númer</th>
+                    <th>Heiti</th>
+                    <th>Einingar</th>
+                </tr>
+                <tr class="inner-cont">
+                    <td>STÆ105G</td>
+                    <td>Hagnýt stærðfræðigreining</td>
+                    <td>8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL104G</td>
+                    <td>Stærðfræðimynstur</td>
+                    <td>8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL107G</td>
+                    <td>Vefforritun 1</td>
+                    <td>8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV201G</td>
+                    <td>Viðmótsforritun 1</td>
+                    <td>8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI201G</td>
+                    <td>Stærðfræði og reiknifræði</td>
+                    <td>8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL203G</td>
+                    <td>Tölvunarfræði 2</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL201G</td>
+                    <td>Greining og hönnun stafrænna rása</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL202G</td>
+                    <td>Greining og hönnun stafrænna rása - verklegt</td>
+                    <td>2e</td>
+                </tr>
+            </table>
+            <table class="cont" id="annad">
+                <caption class="fyrirsogn">Annað ár</caption>
+                <tr class="inner-cont head">
+                    <th>Númer</th>
+                    <th>Heiti</th>
+                    <th>Einingar</th>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL303G</td>
+                    <td>Gagnasafnsfræði</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL304G</td>
+                    <td>Forritunarmál</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL309G</td>
+                    <td>Tölvutækni og forritun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV401G</td>
+                    <td>Þróun hugbúnaðar</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>STÆ209G</td>
+                    <td>Tölfræði og gagnavinnsla</td>
+                    <td>8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL401G</td>
+                    <td>Stýrikerfi</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL403G</td>
+                    <td>Greining reiknirita</td>
+                    <td>6e</td>
+                </tr>
+            </table>
+            <table class="cont" id="tridja">
+                <caption class="fyrirsogn">Þriðja ár</caption>
+                <tr class="inner-cont head">
+                    <th>Númer</th>
+                    <th>Heiti</th>
+                    <th>Einingar</th>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV501G</td>
+                    <td>Hugbúnaðarverkefni 1</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL301G</td>
+                    <td>Formleg mál og reiknanleiki</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV601G</td>
+                    <td>Hugbúnaðarverkefni 2</td>
+                    <td>6e</td>
+                </tr>
+            </table>
+    
+            <table class="cont" id="ohad">
+                <caption class="fyrirsogn">Óháð námsári</caption>
+                <tr class="inner-cont head">
+                    <th>Númer</th>
+                    <th>Heiti</th>
+                    <th>Einingar</th>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV004G</td>
+                    <td>Starfsþjálfun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV103M</td>
+                    <td>Viðhald hugbúnaðar</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV261L</td>
+                    <td>Lokaverkefni</td>
+                    <td>6/8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV502G</td>
+                    <td>Hakkaþon verkefni</td>
+                    <td>4e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN102M</td>
+                    <td>Reiknigreind</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN103G</td>
+                    <td>Tæknistjórnun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN301G</td>
+                    <td>Greining ferla og kerfa</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN502G</td>
+                    <td>Hagverkfræði</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN503G</td>
+                    <td>Verkefnastjórnun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN510M</td>
+                    <td>Vörustjórnun og umhverfismál</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI502M</td>
+                    <td>Inngangur að gagnanámi</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI503M</td>
+                    <td>Greining á frammistöðu tölvukerfa</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI504M</td>
+                    <td>Skýjaforritun og stórgögn</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI505M</td>
+                    <td>Gervigreind</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>STÆ520M</td>
+                    <td>Netafræði</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>STÆ532M</td>
+                    <td>Rafmyntir</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL025M</td>
+                    <td>Inngangur að máltækni</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL103M</td>
+                    <td>Forritun snjalltækja</td>
+                    <td>4e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL305G</td>
+                    <td>Tölvunet og öryggi</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL308G</td>
+                    <td>Tölvuleikjaforritun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL501G</td>
+                    <td>Frá hugmynd að veruleika</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL502M</td>
+                    <td>Samskipti manns og tölvu</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL503M</td>
+                    <td>Dreifð kerfi</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL504M</td>
+                    <td>Reiknirit í lífupplýsingafræði</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖV501M</td>
+                    <td>Hönnun tölva</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>EÐL405G</td>
+                    <td>Þættir úr sögu og heimspeki vísindanna</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV004G</td>
+                    <td>Starfsþjálfun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV204M</td>
+                    <td>Gæðastjórnun í hugbúnaðargerð</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV205M</td>
+                    <td>Prófun hugbúnaðar</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV261L</td>
+                    <td>Lokaverkefni</td>
+                    <td>6/8e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV403G</td>
+                    <td>Vefforritun 2</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV602G</td>
+                    <td>Alþjóðleg markaðssetning tæknilausna</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV602M</td>
+                    <td>Öryggi tölvukerfa</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>HBV603G</td>
+                    <td>Starfsnám í tölvunarfræði og hugbúnaðarverkfræði - grunnnám</td>
+                    <td>24e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN201G</td>
+                    <td>Aðgerðir í skipuheildum</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>IÐN401G</td>
+                    <td>Aðgerðagreining</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>LVF601M</td>
+                    <td>Inngangur að kerfislíffræði</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI204M</td>
+                    <td>Forritun ofurtölva</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>REI603M</td>
+                    <td>Lífsferill gervigreindarlausna</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL202M</td>
+                    <td>Þýðendur</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL203M</td>
+                    <td>Tölvugrafík</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL205G</td>
+                    <td>Tölvur, stýrikerfi og tölvufærni</td>
+                    <td>4e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL212M</td>
+                    <td>Rökstudd forritun</td>
+                    <td>6e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL602G</td>
+                    <td>Málstofa í tölvunarfræði fyrir grunnnema</td>
+                    <td>2e</td>
+                </tr>
+                <tr class="inner-cont">
+                    <td>TÖL607G</td>
+                    <td>Keppnisforritun</td>
+                    <td>6e</td>
+                </tr>
+            </table>
+        </div>
+
+    </main>
+</body>
+
+</html>
