@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="../main.css">
     <style>
         form {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            /* display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
             margin: 10px;
         }
 
@@ -19,15 +19,27 @@
         }
 
         fieldset {
-            margin-bottom: 20px;
+            margin-bottom: 1em;
+            width: 200px;
+        }
+        .fyrsti {
+            float: inline-end;
+        }
+        .annar {
+        }
+        .tridji {
         }
 
+        .fjordi {
+        }
+
+
         input, label {
-            margin: 3px;
+            margin: .5em;
         }
 
         select {
-            margin-bottom: 20px;
+            margin-bottom: 1em;
         }
 
         button {
@@ -51,6 +63,12 @@
         #schools {
             width: 150px;
         }
+
+        .takki {
+            position: absolute;
+            bottom: 10em;
+            left: 15em;
+        }
     </style>
     <title>Sækja um</title>
 </head>
@@ -65,7 +83,7 @@
     </nav>
     <main>
         <form>
-            <fieldset>
+            <fieldset class="fyrsti">
                 <legend>Persónuupplýsingar</legend>
                 <input type="text" id="name" required>
                 <label for="name">Nafn</label>
@@ -83,7 +101,7 @@
                 <label for="email">Netfang</label>
                 <br>
             </fieldset>
-            <fieldset>
+            <fieldset class="annar">
                 <legend>Framhaldsskóli</legend>
 
                 <select id="schools">
@@ -144,7 +162,7 @@
                 <input type="date" id="finishDate">
                 <label for="finishDate">Veldu dag</label>
             </fieldset>
-            <fieldset>
+            <fieldset class="tridji">
                 <legend>Kjörsvið</legend>
 
                 <p>Veldu kjörsvið</p>
@@ -159,7 +177,7 @@
                 <input type="radio" id="reikni" name="kjorsvid">
                 <label for="reikni">Reiknifræði, (Gerir nemendur hæfa til þess að takast á við reiknifræðilega líkanagerð og fræðilegri þætti tölvunarfræði)</label>
             </fieldset>
-            <fieldset>
+            <fieldset class="fjordi">
                 <legend>Fylgigögn</legend>
                 <label for="fylgigogn">Veldu fylgigögn</label>
                 <br>
@@ -177,7 +195,7 @@
                 <br>
                 <input type="file" id="annad">
             </fieldset>
-            <button>Senda</button>
+            <button class="takki">Senda</button>
         </form>
     </main>
 </body>
