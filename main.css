@@ -122,7 +122,7 @@ button h2 {
     color: white;
 }
 
-.contactbutton:focus ~ .contactcontainer{
+.contactbutton:focus ~ .contactcontainer, .contactcontainer:hover, .contactbutton:focus, .contactbutton:focus-within{
     transform: translateX(0%);
 }
 
