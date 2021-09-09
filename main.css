@@ -14,6 +14,10 @@ h2 {
     margin: .2em;
 }
 
+button h2 {
+    font-family: 'Source Code Pro', monospace;
+}
+
 .skip {
     background: white;
     color: black;
@@ -22,24 +26,20 @@ h2 {
     position: absolute;
     top: 0;
     left: 0;
-    -webkit-transform: translateX(-110%);
-            transform: translateX(-110%);
-    -webkit-transition: -webkit-transform 0.3s;
-    transition: -webkit-transform 0.3s;
+    transform: translateX(-110%);
     transition: transform 0.3s;
-    transition: transform 0.3s, -webkit-transform 0.3s;
   }
   
   .skip:focus {
-    -webkit-transform: translateY(0%);
-            transform: translateY(0%);
+    transform: translateY(0%);
   }
 
 .container {
-    margin-top: 20px;
+    margin: 20px;
     display: grid;
-    grid-template-columns: 6fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     padding: 25px;
+    transition: .3s;
 }
 
 .link-container {
@@ -62,7 +62,7 @@ h2 {
     transition: .2s;
 }
 
-.single-link:hover, .single-link:focus-within {
+.single-link:hover, .single-link:focus-within, .contactbutton:hover, .contactbutton:focus{
     background: gray;
     color: white;
 }
@@ -76,29 +76,69 @@ h2 {
     z-index: 1;
 }
 
-.contact-container {
-    margin: 10px;
+.contactbutton {
+    display: table;
+    position: relative;
+    margin: 0 auto;
+    margin-top: 20px;
+    background: white;
+    padding: 5px;
+    border: 3px solid black;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: .15s;
 }
 
-.contact-container li {
+.contactcontainer {
+    padding: 10px;
+    display: flex;
+    position: absolute;
+    
+    transform: translateX(-120%);
+    top: 50px;
+    margin: 10px;
+    z-index: 5;
+    background: white;
+    border: black solid 3px;
+    border-radius: 15px;
+    transition: .3s;
+  }
+
+.contactcontainer li {
     margin: 2px 0;
 }
 
-.contact-container a {
+.contactcontainer a {
     text-decoration: underline;
     color: black;
     border-radius: 5px;
     padding: 2px;
-
 }
 
-.contact-container a:hover, a:focus {
+.contactcontainer a:hover, a:focus {
     background: black;
     color: white;
+}
+
+.contactbutton:focus ~ .contactcontainer{
+    transform: translateX(0%);
+}
+
+.contactbutton:focus ~ .container{
+    filter: blur(5px);
 }
 
 @media only screen and (max-width: 1100px) {
     .container {
         display: block;
+    }
+
+    .contact-container {
+        display: flex;
+        justify-content: center;
+    }
+
+    .contact-container h2 {
+        margin-top: 1em;
     }
 }
