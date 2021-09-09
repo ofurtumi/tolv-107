@@ -2,6 +2,7 @@
 
 body {
     font-family: 'Source Code Pro', monospace;
+    background: white;
     background-image: radial-gradient(white, lightgray);
 }
 
@@ -126,9 +127,9 @@ button h2 {
 }
 
 .contactbutton:focus ~ .container{
-    filter: blur(5px);
+    filter: blur(5px) brightness(.5);
 }
-
+    
 .contactbutton:focus ~ .container .link-spanner{
     pointer-events: none;
 }
