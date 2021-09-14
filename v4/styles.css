@@ -1,0 +1,92 @@
+/* Setjum inn „reset“ sem fjarlægir margin og padding af öllu */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Reiknum stærð á öllum boxum sem border-box */
+html {
+  box-sizing: border-box;
+}
+/* og látum erfast á allt */
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+:root {
+  /* Grunn bilið okkar er 1rem == 16px */
+  --spacing: 1rem;
+  /* Hámarksbreidd á efni */
+  --max-width: 1400px;
+
+  --color-text: #222;
+  --color-link: #069;
+  --color-border: #ccc;
+
+  /* Letur stillingar */
+  --font-size: 16px;
+  --font-family-base: 'Inter', Helvetica, Arial, sans-serif;
+  --font-family-heading: 'Playfair Display', Georgia, serif;
+}
+
+body {
+  font-size: var(--font-size);
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+}
+
+h1, h2, h3 {
+  font-family: var(--font-family-heading);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+.content {
+  display: flex;
+  justify-content: space-between;
+  max-width: calc(var(--max-width)/4);
+}
+
+.categories {
+  display: flex;
+  justify-content: center;
+}
+
+.categories section {
+  margin: var(--spacing);
+  
+}
+
+.categories ul {
+  display: flex;
+  flex-direction: column;
+  padding: var(--spacing) var(--spacing) 0 var(--spacing);
+  border: var(--color-border) 1px solid;
+  font-size: .75em;
+  list-style: none;
+  height: 100%;
+}
+
+.categories li {
+  display: flex;
+  flex-direction: column;
+  border-bottom: var(--color-border) solid 1px;
+  padding-bottom: 1em;
+}
+
+.categories li h3 {
+  margin: .5em 0;
+}
+
+.categories img {
+  max-width: calc(var(--max-width)/5);
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+
+.categories section ul li:nth-child(1) img{order:1;}
+.categories section ul li:nth-child(1) h3{order:2;}
+.categories section ul li:nth-child(1) time{order:3;}
