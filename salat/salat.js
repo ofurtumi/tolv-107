@@ -26,11 +26,22 @@ hraefni = [
   "Rauðlaukur",
   "Sætar kartöflur",
   "Vínber",
-  "Spínathummus"
+  "Spínathummus",
+  "Fetaostur",
+  "Graskersfræ",
+  "Grænmetisbollur",
+  "Jalapeno",
+  "Kasjúhnetur",
+  "Oumph",
+  "Ólífur",
+  "Parmesan",
+  "SÞ. tómatar",
+  "Túnfiskur"
+
 ]
 
 sosur = [
-  "Alioli",
+  "Aioli",
   "Chilli-engifer",
   "Chipotle",
   "Gráðosta",

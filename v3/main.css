@@ -6,8 +6,7 @@ html, body {
 }
 
 nav {
-    position: sticky;
-    position: -webkit-sticky;
+    position: fixed;
     top: 0;
     padding: .75em 0;
     background: white;
