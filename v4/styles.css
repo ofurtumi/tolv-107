@@ -33,6 +33,13 @@ body {
   font-size: var(--font-size);
   line-height: 1.5;
   font-family: var(--font-family-base);
+
+}
+
+main {
+  max-width: var(--max-width);
+  display: flex;
+  flex-wrap: wrap;
 }
 
 h1, h2, h3 {
@@ -44,13 +51,59 @@ a {
   text-decoration: none;
 }
 
-.content {
-  display: flex;
-  justify-content: space-between;
-  max-width: calc(var(--max-width)/4);
+
+/* efst */
+.latest {
+  max-width: calc(var(--max-width)*0.75);
 }
 
+
+.content {
+  display: flex;
+  justify-content: center;
+  height: 100%;
+}
+
+.content img {
+  max-width: fit-content;
+  aspect-ratio: 16/9;
+  object-fit: cover;
+}
+.content section {
+  display: flex;
+  flex-direction: column;
+  max-width: calc(var(--max-width)/4);
+  padding: var(--spacing);
+}
+
+.section p {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content time {
+  justify-self: flex-start;
+  align-self: flex-end;
+}
+
+.content section img{order:1;}
+.content section h3{order:2;}
+.content section p{order:3;}
+.content section time{order:4;}
+
+/* hliðarlisti */
+
+.mest {
+  max-width: calc(var(--max-width)*0.25);
+  padding: calc(var(--spacing)*2);
+}
+
+
+
+
+/* neðst */
 .categories {
+  max-width: var(--max-width);
   display: flex;
   justify-content: center;
 }
