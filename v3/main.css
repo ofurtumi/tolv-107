@@ -5,6 +5,10 @@ html, body {
     font-family: monospace;
 }
 
+main {
+    margin-top: 75px;
+}
+
 nav {
     position: fixed;
     top: 0;
