@@ -68,6 +68,10 @@ time {
   font-weight: 300;
 }
 
+header {
+  margin-left: var(--spacing);
+}
+
 .klukka {
   width: 15px;
   margin-right: calc(var(--spacing)*.25);  
