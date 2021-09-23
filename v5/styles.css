@@ -36,27 +36,18 @@ body {
   font-family: var(--font-family-base);
 }
 
-header {
-  padding: var(--spacing);
-  padding-bottom: 0;
-}
-
 header h1 {
   font-weight: 600;
-  font-size: 3em;
+  word-wrap: break-word;
 }
 
 
 
 main {
-  /* padding: var(--spacing); */
-  max-width: var(--max-width);
-  display: grid;
-  grid-template-columns: repeat(11,1fr);
+  display: flex;
+  flex-direction: column;
   column-gap: 30px;
   margin: 20px;
-  /* display: flex;
-  flex-wrap: wrap; */
 }
 
 h1, h2, h3 {
@@ -83,9 +74,7 @@ header {
 
 
 /* efst */
-.latest {
-  grid-column: 1/9;
-}
+
 
 /* .latest h2 {
   margin-left: var(--spacing);
@@ -93,6 +82,7 @@ header {
 
 .content {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 100%;
 }
@@ -101,7 +91,7 @@ header {
   display: flex;
   flex-direction: column;
   /* max-width: calc(var(--max-width)/4); */
-  grid-column: span 3;
+  /* grid-column: span 3; */
   /* padding: var(--spacing); */
 }
 
@@ -121,12 +111,7 @@ header {
 
 .content time {
   flex-grow: 0;
-  align-self: flex-end;
-}
-
-
-.content time {
-  align-self: flex-end;
+  align-self: flex-start;
   padding-bottom: calc(var(--spacing)*4);
 }
 
@@ -137,12 +122,6 @@ header {
 .content section .pandatime{order: 4;}
 
 /* hliðarlisti */
-
-.mest {
-  grid-column: 10/12;
-  /* max-width: calc(var(--max-width)*0.2); */
-  /* padding: calc(var(--spacing)*2); */
-}
 
 .mest ol {
   padding: var(--spacing);
@@ -155,13 +134,14 @@ header {
 /* auglýsing */
 
 .ad {
-  grid-column: 1/12;
+  grid-column: 1/13;
   position: relative;
   width: 100%;
 
   /* margin: var(--spacing); */
 
   display: flex;
+  flex-direction: column;
   height: 15em;
   justify-content: space-between;
 }
@@ -177,22 +157,21 @@ header {
   z-index: 1;
 }
 
-
 .ad p {
   opacity: 1;
-  font-size: 3em;
+  font-size: 1.5em;
   align-self: flex-end;
   margin: var(--spacing);
   z-index: 5;
 }
 
 .ad a {
-  font-size: 3em;
+  font-size: 2em;
   color: black;
   text-decoration: underline;
   font-weight: 700;
   align-self: flex-end;
-  justify-self: flex-end;
+  justify-self: flex-start;
   margin: var(--spacing);
   filter: none;
   z-index: 5;
@@ -202,18 +181,12 @@ header {
 
 /* neðst */
 .categories {
-  grid-column: 1/12;
-  max-width: var(--max-width);
+  grid-column: 1/13;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   height: fit-content;
   margin-bottom: calc(var(--spacing)*2);
-}
-
-.categories section {
-  /* margin: var(--spacing); */
-  max-width: calc(var(--max-width)*.23);
-  
 }
 
 .categories ul {
@@ -254,3 +227,68 @@ header {
 .categories section ul li:nth-child(1) img{order:1;}
 .categories section ul li:nth-child(1) h3{order:2;}
 .categories section ul li:nth-child(1) time{order:3;}
+
+@media only screen and (min-width: 700px) {
+  main{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+  }
+  .latest {
+    grid-column: 1/9;
+    display: flex;
+    flex-direction: column;
+  }
+  .mest {
+    grid-column: 9/13;
+  }
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 30px;
+    row-gap: 30px;
+  }
+  .categories{
+    margin-bottom: var(--spacing);
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  main {
+    max-width: var(--max-width);
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+  }
+  .latest {
+    grid-column: 1/9;
+  }
+  .content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 30px;
+  }
+  .content time {
+    margin-top: 0;
+    align-self: flex-end;
+  }
+
+  .mest {
+    grid-column: 9/13;
+  }
+  .ad {
+    flex-direction: row;
+  }
+  .ad p{
+    font-size: 3em;
+  }
+  .ad a{
+    font-size: 3em;
+    align-self: flex-end;
+  }
+  .categories {
+    max-width: var(--max-width);
+    flex-direction: row;
+  }
+  .categories section {
+    max-width: calc(var(--max-width)*.23);
+  }
+}
