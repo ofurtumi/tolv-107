@@ -1,0 +1,29 @@
+{
+  "name": "tolv-107",
+  "version": "1.0.0",
+  "description": "npm package fyrir vefforritunarverkefni",
+  "main": "index.js",
+  "scripts": {
+    "browser-sync": "browser-sync start --server --files index.html styles.css",
+    "sass": "sass styles.scss styles.css",
+    "sass-watch": "sass --watch *.scss styles.css",
+    "dev": "concurrently npm:sass-watch npm:browser-sync"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ofurtumi/tolv-107.git"
+  },
+  "keywords": [
+    "vefforritun"
+  ],
+  "author": "Þorvaldur Tumi Baldursson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ofurtumi/tolv-107/issues"
+  },
+  "homepage": "https://github.com/ofurtumi/tolv-107#readme",
+  "dependencies": {
+    "concurrently": "^6.2.1",
+    "sass": "^1.42.1"
+  }
+}
