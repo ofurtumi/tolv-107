@@ -1,9 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
 
+:root {
+    --body-back-c1: #514E6B; /* main body gradient color 1 */
+    --body-back-c2: #7466EE; /* main body gradient color 2 */
+    --card-back-co: #B2ABEB; /* card original color */
+    --card-back-ch: #342E6B; /* card hover color */
+    --card-border:  #8E89BB; /* card original color */
+}
+
 body {
     font-family: 'Source Code Pro', monospace;
-    background: white;
-    background-image: radial-gradient(white, lightgray);
+    /* background: white;
+    background-image: radial-gradient(white, lightgray); */
+    background-image: linear-gradient(to bottom right, var(--body-back-c1), var(--body-back-c2));
 }
 
 a {
@@ -54,18 +63,18 @@ button h2 {
 }
 
 .single-link {
-    background: white;
+    background: var(--card-back-co);
     border-radius: 15px;
     padding: 10px;
-    border: 3px black solid;
-    color: black;
+    border: 3px var(--card-border) solid;
+    color: var(--card-back-ch);
     position: relative;
-    transition: .2s;
+    transition: ease-in-out .2s;
 }
 
 .single-link:hover, .single-link:focus-within, .contactbutton:hover, .contactbutton:focus{
-    background: gray;
-    color: white;
+    background: var(--card-back-ch);
+    color: var(--card-back-co);
 }
 
 .link-spanner{
@@ -81,11 +90,12 @@ button h2 {
 .contactbutton {
     display: table;
     /* position: relative; */
+    color: var(--card-back-ch);
     margin: 0 auto;
     margin-top: 20px;
-    background: white;
+    background: var(--card-back-co);
     padding: 5px;
-    border: 3px solid black;
+    border: 3px solid var(--card-border);
     border-radius: 10px;
     cursor: pointer;
     transition: .15s;
@@ -100,26 +110,31 @@ button h2 {
     top: 100px;
     margin: 10px;
     z-index: 5;
-    background: white;
-    border: black solid 3px;
+    background: var(--card-back-co);
+    border: var(--card-border) solid 3px;
     border-radius: 15px;
     transition: .3s;
   }
 
+.contactcontainer h2 {
+    color: var(--card-back-ch);
+}
+
 .contactcontainer li {
     margin: 2px 0;
+    color: var(--card-back-ch);
 }
 
 .contactcontainer a {
     text-decoration: underline;
-    color: black;
+    color: var(--card-back-ch);
     border-radius: 5px;
     padding: 2px;
 }
 
 .contactcontainer a:hover, a:focus {
-    background: black;
-    color: white;
+    background: var(--card-back-ch);
+    color: var(--card-back-co);
 }
 
 .contactbutton:focus ~ .contactcontainer, .contactcontainer:hover, .contactbutton:focus, .contactbutton:focus-within{
@@ -135,8 +150,8 @@ button h2 {
 }
 
 .contactbutton:focus ~ .container .single-link:hover{
-    background: white;
-    color: black;
+    background: var(--card-back-co);
+    color: var(--card-back-ch);
 }
 
 @media only screen and (max-width: 1100px) {
