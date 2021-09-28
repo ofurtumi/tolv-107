@@ -1,6 +1,7 @@
 {
     "files.exclude": {
         "**/zips": true,
-        "package-lock.json":true
+        "package-lock.json": true,
+        ".stylelintrc.json": true
     }
 }
