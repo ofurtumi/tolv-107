@@ -1,0 +1,67 @@
+:root {
+  --spacing: 1rem;
+  --max-width: 1400px;
+  --color-text: #222;
+  --color-link: #069;
+  --color-border: #ccc;
+  --font-size: 16px;
+  --font-family-base: 'Inter', helvetica, arial, sans-serif;
+  --font-family-heading: 'Playfair Display', georgia, serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  font-size: var(--font-size);
+  line-height: 1.5;
+  font-family: var(--font-family-base);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin: 20px;
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-family-heading);
+}
+
+a {
+  color: var(--color-link);
+  text-decoration: none;
+}
+
+time {
+  font-weight: 300;
+}
+
+header {
+  margin-left: var(--spacing);
+}
+
+header h1 {
+  font-weight: 600;
+  word-wrap: break-word;
+}
+
+.klukka {
+  width: 15px;
+  margin-right: calc(var(--spacing) * 0.25);
+}

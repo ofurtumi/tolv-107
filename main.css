@@ -13,7 +13,7 @@ body {
     /* background: white;
     background-image: radial-gradient(white, lightgray); */
     background-image: linear-gradient(to bottom right, var(--body-back-c1), var(--body-back-c2));
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 a {
@@ -164,6 +164,7 @@ button h2 {
     height: 100%;
     position: absolute;
     z-index: -10;
+    overflow: hidden;
     /* background: rgba(255, 0, 0, 0.24); */
 }
 
