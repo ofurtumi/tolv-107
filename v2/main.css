@@ -1,66 +1,17 @@
-@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap");
-body {
-  margin: 0;
-  padding: 0;
-  font-family: 'Source Code Pro', monospace;
-}
+/* Error: semicolons aren't allowed in the indented syntax.
+ *   ,
+ * 1 | @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');
+ *   |                                                                                                                                   ^
+ *   '
+ *   v2\main.sass 1:131  root stylesheet */
 
-/* css fyrir navbar */
-nav {
-  background: black;
-  color: white;
-  width: 100%;
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: semicolons aren't allowed in the indented syntax.\a   \2577 \a 1 \2502  @import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&display=swap');\d\a   \2502                                                                                                                                    ^\a   \2575 \a   v2\\main.sass 1:131  root stylesheet";
 }
-
-.navbar {
-  margin: 0;
-  padding: 10px;
-  color: white;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
-  -ms-flex-line-pack: center;
-      align-content: center;
-}
-
-.navbar li {
-  display: inline-block;
-  margin: 5px 10px;
-}
-
-.navbar a {
-  color: white;
-}
-
-main {
-  background: white;
-  padding: 25px;
-  padding-top: 10px;
-}
-
-.skip {
-  background: white;
-  color: black;
-  height: 30px;
-  padding: 8px;
-  position: absolute;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
-}
-
-.skip:focus {
-  -webkit-transform: translateY(0%);
-          transform: translateY(0%);
-}
-
-button {
-  font-family: 'Source Code Pro', monospace;
-}
-/*# sourceMappingURL=main.css.map */

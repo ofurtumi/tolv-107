@@ -1,35 +1,34 @@
 {
-  "name": "tolv-107",
+  "name": "vefforritun",
   "version": "1.0.0",
-  "description": "npm package fyrir vefforritunarverkefni",
+  "description": "node.js package fyrir vefforritun",
   "main": "index.js",
   "scripts": {
+    "test": "test",
     "browser-sync": "browser-sync start --server --files index.html styles.css",
-    "sass": "sass main.scss main.css",
-    "sass-watch": "sass --watch *.scss main.css",
+    "sass": "sass styles.scss styles.css",
+    "sass-watch": "sass --watch .",
+    "dev": "concurrently npm:sass-watch npm:browser-sync",
     "lint-scss": "stylelint styles.scss ./**/*.scss",
-    "lint-css": "stylelint styles.css ./**/*.css",
-    "dev": "concurrently npm:sass-watch npm:browser-sync"
+    "lint-css": "stylelint styles.css ./**/*.css"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ofurtumi/tolv-107.git"
   },
-  "keywords": [
-    "vefforritun"
-  ],
-  "author": "Þorvaldur Tumi Baldursson",
+  "author": "Tumi",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/ofurtumi/tolv-107/issues"
-  },
-  "homepage": "https://github.com/ofurtumi/tolv-107#readme",
-  "dependencies": {
+  "devDependencies": {
     "browser-sync": "^2.27.5",
     "concurrently": "^6.2.1",
     "sass": "^1.42.1",
     "stylelint": "^13.13.1",
     "stylelint-config-sass-guidelines": "^8.0.0",
     "stylelint-config-standard": "^22.0.0"
-  }
+  },
+  "bugs": {
+    "url": "https://github.com/ofurtumi/tolv-107/issues"
+  },
+  "homepage": "https://github.com/ofurtumi/tolv-107#readme",
+  "dependencies": {}
 }
