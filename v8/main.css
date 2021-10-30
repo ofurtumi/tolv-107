@@ -1,0 +1,145 @@
+body {
+    background-color: black;
+    color: white;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+main {
+    padding-top: 5em;
+    display: grid;
+    grid-template-columns: repeat(10,1fr);
+    grid-auto-flow: dense;
+    gap: 1em;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+}
+
+p {
+    margin: 10px;
+    text-align: center;
+}
+
+.container {
+    grid-column: 4/8;
+    /* width: 300px; */
+    height: 300px;
+    border: 3px solid white;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.byrja {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.umferdir {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    padding: 0;
+}
+
+.umferdir li {
+    list-style: none;
+    display: inline;
+}
+
+.sbs {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.sbs-takkar {
+    display: flex;
+}
+
+.nidurstada {
+    display: none;
+    height: 100%;
+    flex-direction: column;
+    gap: 0.5em;
+    justify-content: center;
+    align-items: center;
+}
+
+.heildarstats {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    height: 100%;
+    grid-column: 2/4
+}
+
+.heildarstats p {
+    text-align: end;
+}
+
+.scoreboard-title {
+    grid-column: 7/9;
+}
+.scoreboard {
+    height: 100%;
+    grid-column: 8/10;
+    grid-row: 1/9;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+}
+
+.scoreboard p {
+    margin: .25em 0;
+    text-align: left;
+}
+
+#naesta {
+    display: none;
+}
+
+#aftur {
+    display: none;
+}
+
+button {
+    font-family: monospace;
+    font-size: 1.5em;
+    border: 2px solid white;
+    border-radius: 0.5em;
+    background: black;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.15s;
+}
+
+button:hover, button:focus {
+    background: white;
+    color: black;
+}
+
+@media only screen and (max-width: 900px) {
+    main {
+        display: flex;
+        flex-direction: column;
+    }
+
+    container {
+        width: 100%;
+    }
+}

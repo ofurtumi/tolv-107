@@ -85,7 +85,6 @@ function checkGame(player, computer) {
       out = -1;
       break; 
   }
-
   return out;
 }
 // console.assert(checkGame('Skæri', 2) === 1, 'Skæri vinnur blað');
