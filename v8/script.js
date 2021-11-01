@@ -37,6 +37,10 @@ for (let i = 1;i<=3;i++) {
 naestiTakki.addEventListener("click",nyUmferd)
 afturTakki.addEventListener("click",byrjaAftur)
 
+import { letThereBeLight } from "./modules/darklight.js"
+
+ljos.addEventListener("click", letThereBeLight)
+
 function hefjaLeik() {
   wins = 0
   losses = 0

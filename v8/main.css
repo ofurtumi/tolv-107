@@ -1,8 +1,18 @@
+:root {
+    --backgroundLitur:black;
+    --stafaLitur: white;
+}
+
+*{
+    transition: .25s;
+}
+
 body {
-    background-color: black;
-    color: white;
+    background-color: var(--backgroundLitur);
+    color: var(--stafaLitur);
     font-family: monospace;
     font-size: 16px;
+
 }
 
 main {
@@ -30,7 +40,7 @@ h1 {
     grid-column: 4/8;
     /* width: 300px; */
     height: 300px;
-    border: 3px solid white;
+    border: 3px solid var(--stafaLitur);
     border-radius: 10px;
     padding: 10px;
 }
@@ -132,18 +142,24 @@ ul {
 button {
     font-family: monospace;
     font-size: 1.5em;
-    border: 2px solid white;
+    border: 2px solid var(--stafaLitur);
     border-radius: 0.5em;
-    background: black;
+    background: var(--backgroundLitur);
     padding: 10px;
-    color: white;
+    color: var(--stafaLitur);
     cursor: pointer;
     transition: 0.15s;
 }
 
+#ljos {
+    position: absolute;
+    right: 1em;
+    top: 1em;
+}
+
 button:hover, button:focus {
-    background: white;
-    color: black;
+    background: var(--stafaLitur);
+    color: var(--backgroundLitur);
 }
 
 @media only screen and (max-width: 900px) {
@@ -154,6 +170,10 @@ button:hover, button:focus {
 
     container {
         width: 100%;
+    }
+
+    #ljos {
+        position: static;
     }
 
     *{
