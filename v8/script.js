@@ -24,7 +24,7 @@ let heildarLeikir = 0   // hversu marga leiki er búið að spila
 let heildarWin = 0      // fjöldi sigra yfir marga leiki
 let heildarLosses = 0   // fjöldi tapa yfir marga leiki
 
-document.querySelector(".byrja").addEventListener("click", hefjaLeik)
+document.querySelector("#startButton").addEventListener("click", hefjaLeik)
 
 for (let i = 1; i<=5; i++) {
   document.querySelector("#f"+(i)).addEventListener("click",(event) => { fjoldiUmferda(i);});
