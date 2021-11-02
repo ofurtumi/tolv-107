@@ -38,7 +38,6 @@ h1 {
 
 .container {
     grid-column: 4/8;
-    /* width: 300px; */
     height: 300px;
     border: 3px solid var(--stafaLitur);
     border-radius: 10px;
@@ -83,6 +82,7 @@ ul {
 
 .sbs-takkar {
     display: flex;
+    gap: 1em;
 }
 
 .skaeri, .steinn, .blad {
@@ -166,11 +166,22 @@ button:hover, button:focus {
     main {
         display: flex;
         flex-direction: column;
-    }
-
-    container {
         width: 100%;
     }
+
+    .container {
+        width: 90%;
+        /* grid-column: auto; */
+        margin: 1em;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .heildarstats p, .scoreboard p {
+        text-align: center;
+    }
+
 
     #ljos {
         position: static;
@@ -179,4 +190,8 @@ button:hover, button:focus {
     *{
         text-align: center;
     }
+}
+
+@media only screen and (max-width: 550px) {
+    img {display: none;}
 }
