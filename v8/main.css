@@ -157,7 +157,7 @@ button {
     top: 1em;
 }
 
-button:hover, button:focus {
+button:hover, button:focus-visible {
     background: var(--stafaLitur);
     color: var(--backgroundLitur);
 }
