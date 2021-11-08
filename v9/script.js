@@ -8,12 +8,11 @@ const main = document.querySelector("main");
 
 function route() {
     let url = window.location;
-    if (url.includes("/?category=")) {
-        let suburl = url.substring(url.getIndexOf("=") + 1, url.length);
-        fetchNews(suburl);
+    if (url.search != "") {
+        fetchNews(url.search.substring(10))
     }
     else {
-        fetchNews();
+        fetchNews(url.pathname)
     }
 }
 
