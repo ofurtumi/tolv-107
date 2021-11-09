@@ -1,7 +1,6 @@
 //imports
-import { el } from "./modules/helpers";
-import { empty } from "./modules/helpers";
-import { fetchNews } from "./modules/news";
+import { createCategoryBackLink, fetchAndRenderCategory, fetchAndRenderLists } from "./modules/ui.js";
+// import { fetchNews } from "./modules/news.js";
 
 const fjoldiFretta = 5;
 const main = document.querySelector("main");
@@ -9,10 +8,10 @@ const main = document.querySelector("main");
 function route() {
     let url = window.location;
     if (url.search != "") {
-        fetchNews(url.search.substring(10))
+        fetchAndRenderCategory(url.search.substring(10),main,createCategoryBackLink(main,fjoldiFretta),fjoldiFretta)
     }
     else {
-        fetchNews(url.pathname)
+        fetchAndRenderLists(main,fjoldiFretta)
     }
 }
 
