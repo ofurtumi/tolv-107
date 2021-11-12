@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test</title>
+    <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+    <button id="testTakki">Test</button>
+    <input type="text" placeholder="Titill" id="inputTitill">
+    <input type="text" placeholder="Lýsing" id="inputLysing">
+    <input type="date" placeholder="Dagssetning" id="inputDags">
+    <input type="text" placeholder="FLokkur" id="inputFlokkur">
+    <input type="color" id="inputLitur">
+    <div id="holder"></div>
+    <template id="template">
+        <div class="card">
+            <h1 class="titill"><!-- Titill á task --></h1>
+            <p class="lysing"><!-- Lýsing á verkefni, ef einhver --></p>
+            <div class="nedst">
+                <div class="tags">
+                    <span class="tag"><!-- Tag --></span>
+                    <span class="tag"><!-- Tag --></span>
+                    <span class="tag"><!-- Tag --></span>
+                </div>
+                <span class="dags"><!-- 10. nóv  --></span>
+            </div>
+            <span class="flokkur"><!-- Flokkur --></span>
+        </div>
+    </template>
+    <script src="script.js"></script>
+</body>
+</html>
