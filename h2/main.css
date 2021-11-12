@@ -1,0 +1,39 @@
+body {
+    font-size: 16px;
+    /* background: black; */
+    /* color: white; */
+    font-family: monospace;
+  }
+  
+  .card {
+      /* display: flex;
+      flex-direction: column; */
+      width: 400px;
+      border: 2px solid white;
+      margin: 1em;
+      border-radius: 10px;
+      padding: 1em;
+  }
+
+  .titill, .tag, .flokkur {
+    font-weight: bold;
+  }
+  
+  .titill {
+    margin-top: 0;
+    font-size: 1.25em;
+  }
+  
+  .tag {
+    background: lightgray;
+    padding: .25em;
+    border: 1px solid black;
+    border-radius: 10px;
+  }
+
+  .nedst {
+    margin-bottom: 1em;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
