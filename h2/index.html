@@ -8,13 +8,22 @@
     <link rel="stylesheet" href="main.css" />
 </head>
 <body>
-    <button id="testTakki">Test</button>
-    <input type="text" placeholder="Titill" id="inputTitill">
-    <input type="text" placeholder="Lýsing" id="inputLysing">
-    <input type="date" placeholder="Dagssetning" id="inputDags">
-    <input type="text" placeholder="FLokkur" id="inputFlokkur">
-    <input type="color" id="inputLitur">
-    <div id="holder"></div>
+    <main>
+        <div class="takkar">
+            <h1>bæta við</h1>
+            <input type="text" placeholder="Titill" id="inputTitill">
+            <input type="text" placeholder="Lýsing" id="inputLysing">
+            <input type="date" placeholder="Dagssetning" id="inputDags">
+            <input type="text" placeholder="Tag1" id="inputTag1">
+            <input type="text" placeholder="Tag2" id="inputTag2">
+            <input type="text" placeholder="Tag3" id="inputTag3">
+            <input type="text" placeholder="FLokkur" id="inputFlokkur">
+            <input type="color" id="inputLitur">
+            <button id="testTakki">Test</button>
+        </div>
+        <div id="holder"></div>
+    </main>
+
     <template id="template">
         <div class="card">
             <h1 class="titill"><!-- Titill á task --></h1>
@@ -27,7 +36,10 @@
                 </div>
                 <span class="dags"><!-- 10. nóv  --></span>
             </div>
-            <span class="flokkur"><!-- Flokkur --></span>
+            <div class="fogd">
+                <span class="flokkur"><!-- Flokkur --></span>
+                <button id="delete">Eyða</button>
+            </div>
         </div>
     </template>
     <script src="script.js"></script>

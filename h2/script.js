@@ -2,27 +2,53 @@ let takki = document.querySelector("#testTakki");
 let iTitill = document.querySelector("#inputTitill");
 let iLysing = document.querySelector("#inputLysing");
 let iDags = document.querySelector("#inputDags");
+let iTag1 = document.querySelector("#inputTag1");
+let iTag2 = document.querySelector("#inputTag2");
+let iTag3 = document.querySelector("#inputTag3");
 let iFlokkur = document.querySelector("#inputFlokkur");
 let iLitur = document.querySelector("#inputLitur");
 
 let listi = [];
+let id = 0;
 
 takki.addEventListener("click", nyttShit);
 let template = document.querySelector("#template");
 let holder = document.querySelector("#holder");
 
 function nyttShit() {
-  let clone = template.content.cloneNode(true);
   let uppl = writeJson();
-  clone.querySelector(".titill").textContent = uppl.Titill;
-  clone.querySelector(".lysing").textContent = uppl.Lysing;
-  clone.querySelector(".dags").textContent = uppl.Dags;
+  builder(uppl.ID,uppl.Titill,uppl.Lysing,uppl.Dags,uppl.Flokkur,uppl.Tags,uppl.Litur);
+}
+
+function builder(id,tit,lys,dag,flo,tag,lit) {
+  let clone = template.content.cloneNode(true);
   let tags = clone.querySelectorAll(".tag");
-  tags[0].textContent = "tag 1";
-  tags[1].textContent = "tag 2";
-  tags[2].textContent = "tag 3";
-  clone.querySelector(".flokkur").textContent = uppl.Flokkur;
-  clone.querySelector(".card").style.borderColor = uppl.Litur;
+  clone.querySelector(".titill").textContent = tit;
+  clone.querySelector(".lysing").textContent = lys;
+  clone.querySelector(".dags").textContent = dag;
+  clone.querySelector(".flokkur").textContent = flo;
+  let card = clone.querySelector(".card");
+  card.style.borderColor = lit
+  let idToDel = id;
+
+  for (let i = 0; i < 3; i++) {
+    // console.log(tag[i])
+    if (tag[i] === "") tags[i].style.display = "none"
+    tags[i].textContent = tag[i];
+  }
+
+  clone.querySelector("#delete").addEventListener("click",(e) => {
+    card.remove()
+    console.log(idToDel)
+    for (const item of listi) {
+      if (item.ID === idToDel) {
+        localStorage.removeItem("listi")
+        listi.splice(listi.indexOf(item),1)
+        localStorage.setItem("listi",JSON.stringify(listi))
+        break;
+      }
+    }
+  })
 
   holder.appendChild(clone)
 }
@@ -34,11 +60,25 @@ function takeAndEscape(e) {
 }
 
 function writeJson() {
+  if (listi.length <= 0) { 
+    id = 0; 
+    console.log(listi.length)
+  }
+  else{ 
+    id = listi[listi.length-1].ID+1;
+    console.log(id)
+  }
   let obj = {
+    ID: id,
     Titill: takeAndEscape(iTitill),
     Lysing: takeAndEscape(iLysing),
-    Dags: takeAndEscape(iDags),
+    Dags: dateFormat(takeAndEscape(iDags)),
     Flokkur: takeAndEscape(iFlokkur),
+    Tags: [
+      takeAndEscape(iTag1),
+      takeAndEscape(iTag2),
+      takeAndEscape(iTag3),
+    ],
     Litur: takeAndEscape(iLitur),
   }
 
@@ -52,22 +92,29 @@ function writeJson() {
 function onStart() {
   let geymdurListi = localStorage.getItem("listi");
   let parsedListi = JSON.parse(geymdurListi);
-  console.log(parsedListi)
+  
   for (const key of parsedListi) {
     listi.push(key);
-    let clone = template.content.cloneNode(true);
-    clone.querySelector(".titill").textContent = key.Titill;
-    clone.querySelector(".lysing").textContent = key.Lysing;
-    clone.querySelector(".dags").textContent = key.Dags;
-    let tags = clone.querySelectorAll(".tag");
-    tags[0].textContent = "tag 1";
-    tags[1].textContent = "tag 2";
-    tags[2].textContent = "tag 3";
-    clone.querySelector(".flokkur").textContent = key.Flokkur;
-    clone.querySelector(".card").style.borderColor = key.Litur;
-
-    holder.appendChild(clone)
+    builder(key.ID,key.Titill,key.Lysing,key.Dags,key.Flokkur,key.Tags,key.Litur)
   }
 }
 
-onStart()
+function empty(element) {
+  if (!element || !element.firstChild) {
+    return;
+  }
+
+  while (element.firstChild) {
+    element.removeChild(element.firstChild);
+  }
+}
+
+function dateFormat(d) {
+  let out = "";
+  out = out + d.substring(8,10) + "-";
+  out = out + d.substring(5,7) + "-";
+  out = out + d.substring(0,4);
+  return out;
+}
+
+if (localStorage.getItem("listi") !== null) onStart();
